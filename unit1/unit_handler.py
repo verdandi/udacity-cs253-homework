@@ -3,6 +3,8 @@
 
 import webapp2
 import utils
+import valid_date
+
 
 form = """
 <form method="post">
@@ -44,9 +46,9 @@ class Unit1Handler(webapp2.RequestHandler):
         userMonth = self.request.get('month')
         userDay = self.request.get('day')
         userYear = self.request.get('year')
-        month = utils.valid_month(userMonth)
-        day = utils.valid_day(userDay)
-        year = utils.valid_year(userYear)
+        month = valid_date.valid_month(userMonth)
+        day = valid_date.valid_day(userDay)
+        year = valid_date.valid_year(userYear)
 
         if not (month and day and year):
             self.write_form("I'm sorry... You input invalid data :(", userMonth, userDay, userYear)
