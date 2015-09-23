@@ -9,6 +9,7 @@ from unit1.mashka_thanks_handler import ThanksMashkaHandler
 from unit2.unit_handler import Unit2Handler
 from unit2.rot13_handler import ROT13Handler
 from unit2.signup_handler import SignupHandler
+from unit2.welcome_handler import WelcomeHandler
 
 form = """
 <ul>
@@ -32,7 +33,9 @@ app = webapp2.WSGIApplication([('/', MainPageHandler),
                                ('/unit1/thanks', ThanksHandler),
                                ('/unit1/thanks_mashka', ThanksMashkaHandler),
                                ('/unit2', Unit2Handler),
+                               ('/unit2/', Unit2Handler),
                                ('/unit2/rot13', ROT13Handler),
                                ('/unit2/signup', SignupHandler),
+                               ('/unit2/welcome', WelcomeHandler),
                               ],
                                debug=False)
