@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% set site_title = "Unit3 homework: blog" %}
+
+{% block content %}
+
+<div class="centered"><a href="/">main page</a> <a href="/unit3/newpost">create new article</a></div>
+<br>
+<h2>My first blog</h2>
+{% for article in articles %}
+<div class="centered">
+<h3>{{article.title}}</h3>
+    {{article.get_text() | safe}}
+{% endfor %}
+</div>
+
+{% endblock %}

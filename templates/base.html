@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>
+        {% if site_title %}
+            {{site_title}}
+        {% else %}
+            Udacity CS253 Homework
+        {% endif %}
+    </title>
+        <link rel="stylesheet" href="/styles/style.css" type="text/css">
+        <body>
+            <h1>Udacity CS253 Homework</h1>
+            {% block content %}
+            {% endblock %}
+            <div class="footer"> &copy; Kuksov Pavel </div>
+        </body>
+    </head>
+</html>

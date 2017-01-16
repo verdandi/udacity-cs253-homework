@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% set site_title = "Unit1 homework" %}
+
+{% block content %}
+
+<div class="centered"><a href="/">main page</a></div>
+<br>
+<h2>What is your birthday?</h2>
+<form method="post">
+    <div class="centered">
+        <table>
+            <tbody>
+            <tr>
+                <td class="label">month(str)</td>
+                <td>
+                    <input type="text" value="{{month}}" name="month"></input>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">day(number)</td>
+                <td>
+                    <input type="text" value="{{day}}" name="day"></input>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">year(number)</td>
+                <td>
+                    <input type="text" value="{{year}}" name="year"></input>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    {% if error %}
+        <div class="centered error">{{error}}</div>
+    {% else %}
+        <br>
+    {% endif %}
+    <div class="centered">
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}

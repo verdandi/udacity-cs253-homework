@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Blog</title>
+<link rel="stylesheet" href="/styles/style.css" type="text/css">
+</head>
+<body>
+    <a href="/unit3">go to the blog front page</a>
+    <h1>{{article.title}}</h1>
+    <br>
+    <br>
+    {{article.get_text() | safe}}
+</body>
+</html>

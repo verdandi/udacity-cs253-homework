@@ -1,42 +1,12 @@
 # developed by: Kuksov Pavel
 # e-mail: aimed.fire@gmail.com
 
-import webapp2
 import utils
 import valid_date
 
-
-form = """
-<form method="post">
-    <div style="color: red">%(error)s</div>
-    What's your birthday?
-    <br>
-    <label>
-        month
-        <input type="text" name="month" value = "%(month)s">
-    </label>
-    <br>
-    <label>
-        day
-        <input type="text" name="day" value = "%(day)s">
-    </label>
-    <br>
-    <label>
-        year
-        <input type="text" name="year" value = "%(year)s">
-    </label>
-    <br>
-    <br>
-    <input type="submit">
-</form>
-"""
-
-class Unit1Handler(webapp2.RequestHandler):
+class Unit1Handler(utils.Handler):
     def write_form(self, error="", month="", day="", year=""):
-        self.response.write(form % {'error': error,
-                                    'month': utils.escape_html(month),
-                                    'day': utils.escape_html(day),
-                                    'year': utils.escape_html(year)})
+        self.render("unit1_form.html", error=error, month=month, day=day, year=year)
 
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'

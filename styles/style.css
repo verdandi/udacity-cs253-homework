@@ -1,7 +1,51 @@
+h1 {
+    text-align: center;
+    background-color: #ddd;
+    color: #888;
+    margin: 0;
+    height: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
 .label {
-  text-align: right;
+    text-align: left;
+}
+
+div.centered {
+    text-align: center;
+}
+
+div.left {
+    text-align: left;
+}
+
+div.right {
+    text-align: right;
+}
+
+div.centered table {
+    margin: 0 auto;
+    text-align: left;
 }
 
 .error {
   color: red;
+}
+
+.footer {
+    position: fixed; /* fixed position */
+    bottom: 0; /* in the bottom of page */
+    text-align: center;
+    padding: 10px; /* fields around the text */
+    background-color: #ddd; /* background color */
+    color: #888; /* text symbols color */
+    width: 100%; /* widht of layer */
+
 }

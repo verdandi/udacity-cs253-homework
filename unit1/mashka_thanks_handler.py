@@ -1,8 +1,12 @@
 # developed by: Kuksov Pavel
 # e-mail: aimed.fire@gmail.com
 
-import webapp2
+import utils
 
-class ThanksMashkaHandler(webapp2.RequestHandler):
+class ThanksMashkaHandler(utils.Handler):
+    def write_form(self):
+        self.render("thanks_mashka.html")
+
     def get(self):
-        self.response.write("Mashka?! O_o")
+        self.response.headers['Content-Type'] = 'text/html'
+        self.write_form()

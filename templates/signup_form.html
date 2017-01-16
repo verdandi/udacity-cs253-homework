@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% set site_title = "Unit2 homework: signup form" %}
+
+{% block content %}
+
+<div class="centered"><a href="/">main page</a>  <a href="/unit2">go back</a></div>
+<br>
+<form method="post">
+    <h2>Signup</h2>
+    <div class="centered">
+        <table>
+          <tbody>
+            <tr>
+              <td class="label">Username</td>
+              <td>
+                  <input type="text" value="{{username}}" name="username"></input>
+              </td>
+              <td class="error">{{usernameError}}</td>
+            </tr>
+            <tr>
+              <td class="label">Password</td>
+              <td>
+                <input type="password" value="" name="password"></input>
+              </td>
+              <td class="error">{{passwordError}}</td>
+            </tr>
+            <tr>
+              <td class="label">Verify Password</td>
+              <td>
+                <input type="password" value="" name="verify"></input>
+              </td>
+              <td class="error">{{verifyError}}</td>
+            </tr>
+            <tr>
+              <td class="label">E-Mail (Optional)</td>
+              <td>
+                  <input type="text" value="{{email}}" name="email"></input>
+              </td>
+              <td class="error">{{emailError}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="centered">
+        <input type="submit" value="submit">
+    </div>
+</form>
+
+{% endblock %}
